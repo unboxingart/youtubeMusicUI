@@ -6,20 +6,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black;
+
+        }
+
+        section {
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+
+        #profile img {
+            width: 30px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+        #logo img {
+            width: 150px;
+        }
+
+        #menu ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #menu ul li {
+            margin-left: 20px;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header {
+            margin: 0px 20px;
+        }
+
+        #profilePopup {
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            display: none;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .albumArt {
+            width: 250px;
+        }
+
+        #listenAgain {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navbar starts here -->
-    <nav></nav>
+    <section>
+        <header>
+            <nav>
+                <div id="logo">
+                    <img src="assets/logo.png" alt="">
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><i style="margin-right:10px" class="bi bi-search"></i><a href="#">Home</a></li>
+                    </ul>
+                </div>
+                <div id="profile">
+                    <i class="bi bi-cast"></i>
+                    <img src="assets/user.jpg" onclick="showMenu()" alt="">
+                </div>
+            </nav>
+        </header>
+    </section>
+
     <!-- Navbar ends here -->
 
-    <!-- Listen Again starts here -->
+    <div id="profilePopup">
+        <ul>
+            <li class="linkStyle"><a href="#">Link One</a></li>
+            <li class="linkStyle"><a href="#">Link One</a></li>
+            <li class="linkStyle"><a href="#">Link One</a></li>
+            <li class="linkStyle"><a href="#">Link One</a></li>
+        </ul>
+    </div>
 
+    <!-- Listen Again starts here -->
+    <section id="listenAgain" class="container">
+        <h1>Listen Again</h1>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="assets/music.jpg" class="albumArt" alt="">
+                <p>Album Title | Singer Name | Count</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="assets/music.jpg" class="albumArt" alt="">
+                <p>Album Title | Singer Name | Count</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="assets/music.jpg" class="albumArt" alt="">
+                <p>Album Title | Singer Name | Count</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="assets/music.jpg" class="albumArt" alt="">
+                <p>Album Title | Singer Name | Count</p>
+            </div>
+        </div>
+    </section>
     <!-- Listen Again ends here -->
 
     <!-- Quick Picks starts here -->
 
     <!-- Quick Picks ends here -->
+
+    <script>
+        function showMenu() {
+            // let profilePopup = document.getElementById("profilePopup");
+            // let currentStatus = profilePopup.getAttribute("display");
+            // console.log(currentStatus);
+            if (document.getElementById("profilePopup").style.display == "none") {
+                document.getElementById("profilePopup").style.display = "block";
+            } else {
+                document.getElementById("profilePopup").style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+    <section id="outer">
+        <div id="left">
+            <div id="profile"></div>
+            <div id="pages"></div>
+        </div>
+        <div id="middle">
+            <div id="post"></div>
+            <div id="news"></div>
+        </div>
+        <div id="right">
+            <div id="news"></div>
+            <div id="ad"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
 </body>
 
 </html>
